@@ -55,7 +55,6 @@ else if (pets < allowedPets) {
 else if (pets >= allowedPets) {
   console.log("Oh no, I have to many pets!");
 }
-
 // STRETCH GOALS:
 
 // 16 - Make a variable called `mostPets` and a conditional that
@@ -63,10 +62,22 @@ else if (pets >= allowedPets) {
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios.
 // console.log `mostPets` after the conditional has run.
-let mostPets = pets || friendsPets;
-  if (pets > friendsPets) {
-    console.log(mostPets);
-  }
-// 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
 
+// First try
+// let mostPets = pets || friendsPets;
+//   if (pets > friendsPets) {
+//     console.log(mostPets);
+  // }
+  let mostPets;
+  if (pets > friendsPets) {
+      mostPets = pets;
+  } else if (friendsPets > pets) {
+      mostPets = friendsPets;
+  } else {
+      mostPets = pets;
+  }
+  console.log(mostPets);
+
+// 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
+//
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
