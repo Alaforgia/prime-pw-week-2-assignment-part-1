@@ -49,7 +49,7 @@ if(luckyNumber === 2 && adventurous === true) {
 if (pets < allowedPets) {
   console.log("I can have more pets!");
 }
-else if (pets = allowedPets) {
+else if (pets == allowedPets) {
   console.log("I have enough pets");
 }
 else if (pets > allowedPets) {
@@ -79,5 +79,15 @@ else if (pets > allowedPets) {
   console.log(mostPets);
 
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
-//
+switch (mostPets) {
+  case pets > friendsPets:
+    mostPets = pets;
+    break;
+    case friendsPets > pets:
+      mostPets = friendsPets;
+      break;
+
+  default:
+    console.log(mostPets);
+}
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
